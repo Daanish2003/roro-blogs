@@ -24,7 +24,7 @@ const SectionCardWrapper = ({title, description, imageUrl, type, slug}: SectionC
     }
     
   return (
-    <Card className="overflow-hidden w-[350px] rounded-xl hover:scale-105"
+    <Card className="overflow-hidden w-[350px] rounded-xl hover:scale-105 transition-all ease-in-out duration-300"
     onClick={handleSectionCardClick}
     >
       <Image 
