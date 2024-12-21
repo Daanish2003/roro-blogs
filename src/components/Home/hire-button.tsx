@@ -6,9 +6,9 @@ const HireMeButton = () => {
     return (
         <Button asChild>
             <Link
-                href="/hire"
+                href="/auth"
             >
-                {"Hire Me"}
+                Login
             </Link>
         </Button>
     )

@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Merienda } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import Navbar from "@/components/Home/navbar";
-import { NavbarProvider } from "@/components/providers/navbar-provider";
+import React from "react";
 
 export const merienda = Merienda({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -17,8 +16,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  model
 }: Readonly<{
   children: React.ReactNode;
+  model: React.ReactNode
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -30,12 +31,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavbarProvider>
-            <Navbar />
-          </NavbarProvider>
-          <div>
           {children}
-          </div>
+          {model}
         </ThemeProvider>
       </body>
     </html>
